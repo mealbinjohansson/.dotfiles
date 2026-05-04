@@ -81,10 +81,6 @@ tooltip {
   color: #ffffff;
 }
 
-#network.disconnected {
-  color: #8a8a8a;
-}
-
 #pulseaudio {
   color: #ffffff;
 }
@@ -98,7 +94,3 @@ tooltip {
   margin-right: 8px;
 }
 
-#battery.warning,
-#battery.critical {
-  color: #8a8a8a;
-}
