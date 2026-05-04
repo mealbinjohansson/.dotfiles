@@ -22,7 +22,8 @@
   },
 
   "clock": {
-    "format": "{:%Y-%m-%d %H:%M}"
+    "format": "{:%Y-%m-%d %H:%M:%S}",
+    "interval": 1
   },
 
   "network": {
