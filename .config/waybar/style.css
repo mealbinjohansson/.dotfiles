@@ -1,0 +1,104 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "Input Mono";
+  font-size: 13px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: rgba(0, 0, 0, 0.82);
+  color: #f5f5f5;
+}
+
+tooltip {
+  opacity: 0;
+  background: transparent;
+  border: none;
+}
+
+#workspaces {
+  margin: 5px 0 5px 8px;
+}
+
+#workspaces button {
+  background: transparent;
+  background-image: none;
+  border: none;
+  color: #8a8a8a;
+  margin: 0 2px;
+  padding: 0;
+  min-width: 24px;
+  min-height: 24px;
+  border-radius: 6px;
+  outline: none;
+  box-shadow: none;
+  text-shadow: none;
+  transition: none;
+}
+
+#workspaces button label {
+  min-width: 24px;
+  text-shadow: none;
+}
+
+#workspaces button:hover {
+  background: #1a1a1a;
+  background-image: none;
+  border: none;
+  color: #ffffff;
+  outline: none;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+#workspaces button.active {
+  background: #ffffff;
+  color: #000000;
+}
+
+#network,
+#pulseaudio,
+#battery {
+  background: rgba(255, 255, 255, 0.08);
+  margin: 5px 0;
+  padding: 0 10px;
+  border-radius: 6px;
+}
+
+#clock {
+  background: transparent;
+  margin: 0;
+  padding: 0 10px;
+  border-radius: 0;
+}
+
+#clock {
+  color: #ffffff;
+}
+
+#network {
+  color: #ffffff;
+}
+
+#network.disconnected {
+  color: #8a8a8a;
+}
+
+#pulseaudio {
+  color: #ffffff;
+}
+
+#pulseaudio.muted {
+  color: #8a8a8a;
+}
+
+#battery {
+  color: #ffffff;
+  margin-right: 8px;
+}
+
+#battery.warning,
+#battery.critical {
+  color: #8a8a8a;
+}
