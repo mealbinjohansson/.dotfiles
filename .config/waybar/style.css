@@ -6,15 +6,22 @@
   min-height: 0;
 }
 
+@define-color bg rgba(0, 0, 0, 0.82);
+@define-color fg #ffffff;
+@define-color fg-soft #f5f5f5;
+@define-color muted #8a8a8a;
+@define-color surface rgba(255, 255, 255, 0.08);
+@define-color hover #1a1a1a;
+
 window#waybar {
-  background: rgba(0, 0, 0, 0.82);
-  color: #f5f5f5;
+  background: @bg;
+  color: @fg-soft;
 }
 
 tooltip {
-  opacity: 0;
   background: transparent;
   border: none;
+  opacity: 0;
 }
 
 #workspaces {
@@ -24,15 +31,14 @@ tooltip {
 #workspaces button {
   background: transparent;
   background-image: none;
-  border: none;
-  color: #8a8a8a;
+  border-radius: 6px;
+  box-shadow: none;
+  color: @muted;
   margin: 0 2px;
-  padding: 0;
   min-width: 24px;
   min-height: 24px;
-  border-radius: 6px;
   outline: none;
-  box-shadow: none;
+  padding: 0;
   text-shadow: none;
   transition: none;
 }
@@ -43,54 +49,45 @@ tooltip {
 }
 
 #workspaces button:hover {
-  background: #1a1a1a;
+  background: @hover;
   background-image: none;
   border: none;
-  color: #ffffff;
-  outline: none;
   box-shadow: none;
+  color: @fg;
+  outline: none;
   text-shadow: none;
 }
 
 #workspaces button.active {
-  background: #ffffff;
+  background: @fg;
   color: #000000;
+}
+
+#clock,
+#network,
+#pulseaudio,
+#battery {
+  color: @fg;
+  padding: 0 10px;
 }
 
 #network,
 #pulseaudio,
 #battery {
-  background: rgba(255, 255, 255, 0.08);
-  margin: 5px 0;
-  padding: 0 10px;
+  background: @surface;
   border-radius: 6px;
+  margin: 5px 0;
 }
 
 #clock {
   background: transparent;
   margin: 0;
-  padding: 0 10px;
-  border-radius: 0;
-}
-
-#clock {
-  color: #ffffff;
-}
-
-#network {
-  color: #ffffff;
-}
-
-#pulseaudio {
-  color: #ffffff;
 }
 
 #pulseaudio.muted {
-  color: #8a8a8a;
+  color: @muted;
 }
 
 #battery {
-  color: #ffffff;
   margin-right: 8px;
 }
-
